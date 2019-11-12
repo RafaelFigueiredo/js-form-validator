@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Validator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./validator.css">
 </head>
 <body>
-    <h1>Validator</h1>
-    <input id="txtName" type="text">
+   <div class="container">
+    <h1>Form Validator</h1>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="txtName">Name</label>
+        <div class="col-sm-10">
+        <input type="text" class="form-control form-control-sm on-error" id="txtName" placeholder="system name..." value="${name}">
+        <span id="txtName-error" class="message-on-input"></span>
+        </div>
+    </div>   
+   </div>
 
     <script src="./validator.js"></script>
 </body>

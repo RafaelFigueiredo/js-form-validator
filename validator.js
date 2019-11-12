@@ -36,11 +36,21 @@ const UI = (function () {
 
                     //TODO: show error
                     if (r.valid === true) {
-                        //remove error
                         console.log("success handling", r);
+                        
+                        //remove error
+                        document.querySelector(rule.selector)
+                        .classList.remove('on-error');
+                        document.querySelector(`${rule.selector}-error`)
+                        .innerHTML=r.msg;
                     }else{
-                        //anything other than true is a error to handle
                         console.log("error handling", r);
+                        //anything other than true is a error to handle
+                        document.querySelector(rule.selector)
+                        .classList.add('on-error');
+                        
+                        document.querySelector(`${rule.selector}-error`)
+                        .innerHTML=r.msg;
                         return false;
                     }
                 }
@@ -62,7 +72,7 @@ const UI = (function () {
                 })());
             });
 
-            //submit
+            //TODO: submit
         },
     }
 })();

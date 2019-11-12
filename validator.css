@@ -1,0 +1,9 @@
+.message-on-input {
+    font-size: 0.70em;
+    color: red
+}
+
+input.on-error {
+    border: 1px solid pink;
+    background-color: rgba(255, 0, 0, 0.05);
+}
